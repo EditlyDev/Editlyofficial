@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editly - AI Video Editing SaaS</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: white;
+            background-color: black;
+            overflow: hidden; /* Prevent scrolling during loading */
+        }
+
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #loading-screen h1 {
+            font-size: 1.5rem; /* Smaller font size */
+            color: white;
+            text-transform: uppercase;
+            animation: fade 1.5s infinite;
+        }
+
+        @keyframes fade {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Main Content */
+        #main-content {
+            display: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            border-bottom: 1px solid white;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid white;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <h1>Loading Editly...</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <header>
+            <div class="logo">Editly</div>
+        </header>
+
+        <div class="hero">
+            <h1>Welcome to Editly</h1>
+            <p>Your all-in-one AI-powered video editing platform. Create stunning videos effortlessly with our intelligent tools and professional templates.</p>
+            <a href="login.html" class="cta-button">Get Started</a>
+        </div>
+
+        <footer>
+            © 2024 Editly. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        // Simulate loading screen
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            const mainContent = document.getElementById('main-content');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                mainContent.style.display = 'block';
+            }, 3000); // Adjust loading duration if needed
+        });
+    </script>
+</body>
+</html>
